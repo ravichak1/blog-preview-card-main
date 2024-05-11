@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Figtree:ital,wght@0,300..900;1,300..900&family=Handlee&family=Inter:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sintony:wght@400;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Young+Serif&display=swap');
+
+:root{
+    /* ## Colors
+
+    ### Primary */
+
+    --yellow: hsl(47, 88%, 63%);
+
+    /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+
+    /* ## Typography
+
+    ### Body Copy */
+
+    --fontSizeParagraph: 16px;
+
+    --fontFamily :"Figtree", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--yellow);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSizeParagraph);
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--white);
+    padding: 24px;
+    width: 384px;
+    border-radius: 20px;
+    line-height: 1.5rem;
+    box-shadow: 10px 10px var(--black);
+}
+
+#imageContent img{
+    border-radius: 10px;
+}
+
+.category{
+    background-color: var(--yellow);
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.publishDate{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.title{
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.title:hover{
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--yellow);
+}
+
+.description{
+    color: var(--grey);
+}
+
+#author{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#author img{
+    width: 32px;
+}
+
+#author h5{
+    font-weight: 800;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media screen and (max-width: 375px){
+    .container{
+        width: 90%;
+        margin: auto;
+    }
+
+    #imageContent img{
+        width: 100%;
+    }
+}
